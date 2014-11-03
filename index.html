@@ -1,0 +1,75 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <link href="http://fast.fonts.com/cssapi/a06569e3-b2e5-4eb9-96d4-ccfbfc27d87c.css" rel="stylesheet">
+  <link href="https://fontastic.s3.amazonaws.com/jqUyZFhWHEBP9yspKwVDNP/icons.css" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>GiFSTER</title>
+  <meta name="description" content="Be a memelord with our lists of trending animated GIFs.">
+  <meta name="Keywords" content="gif, animated, meme, humor, funny">
+  <meta name="Author" content="Joshua Butner">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <link rel="shortcut icon" href="/assets/images/favicon.ico">
+
+  <link rel="stylesheet" href="/assets/static/normalize.css">
+  <link rel="stylesheet" href="/assets/styles/gifster.css">
+  <script src="/assets/static/modernizr.js"></script>
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body class="gifster">
+
+  <div class="master-container">
+
+    <header class="global">
+      <nav class="global navigation constrained" role="navigation">
+
+        <a class="logo" href="/">GiFSTER</a>
+
+        <div id="gif-search" class="gif-search">
+          <form onsubmit="return false;">
+            <input class="gif-search-input" placeholder="Enter your search term..." type="text" value="" name="search" id="search">
+            <input class="gif-search-submit" type="submit" value="">
+            <span class="icon-search"></span>
+          </form>
+        </div>
+
+      </nav> <!-- nav.global.navigation -->
+    </header> <!-- header.global -->
+
+    <section class="trending-gifs">
+      <div class="constrained">
+
+        <ul class="trending-items"></ul>
+
+      </div>
+    </section>
+
+  </div> <!-- .master-container -->
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="/assets/static/jquery.js"><\/script>')</script>
+
+  <script src="/assets/scripts/plugins.js"></script>
+  <script src="/assets/scripts/gifster.js"></script>
+
+  <script>
+    new gifSearch( document.getElementById( 'gif-search' ) );
+  </script>
+
+  <!-- Google Analytics
+  <script>
+    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+    e.src='//www.google-analytics.com/analytics.js';
+    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+    ga('create','UA-45618728-1');ga('send','pageview');
+  </script>
+ -->
+
+ </body>
+</html>

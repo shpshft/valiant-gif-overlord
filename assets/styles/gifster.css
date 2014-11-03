@@ -1,0 +1,525 @@
+/* Neat 1.7.0
+ * http://neat.bourbon.io
+ * Copyright 2012-2014 thoughtbot, inc.
+ * MIT License */
+html {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+/*
+
+  GLOBALS
+
+------------------------------------------------------ */
+*,
+*:after,
+*:before {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html,
+body {
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: lavender;
+  color: #333;
+  font-family: "Helvetica Neue", sans-serif;
+}
+
+a {
+  color: #6EB6DA;
+  text-decoration: none;
+}
+a:hover, a:active {
+  color: #fff;
+}
+
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+ul li,
+ol li {
+  display: inline-block;
+}
+
+/* Header Style */
+.main,
+.container > header {
+  margin: 0 auto;
+  padding: 2em;
+}
+
+.container > header {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.01);
+}
+
+.container > header h1 {
+  font-size: 2.625em;
+  line-height: 1.3;
+  margin: 0;
+  font-weight: 300;
+}
+
+.container > header span {
+  display: block;
+  font-size: 60%;
+  color: #e67e22;
+  padding: 0 0 0.6em 0.1em;
+}
+
+/* Main Content */
+.main {
+  max-width: 69em;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 0 2em;
+  min-height: 300px;
+  position: relative;
+}
+
+.column:nth-child(2) {
+  box-shadow: -1px 0 0 rgba(0, 0, 0, 0.1);
+}
+
+.column p {
+  font-weight: 300;
+  font-size: 2em;
+  padding: 0;
+  margin: 0;
+  text-align: right;
+  line-height: 1.5;
+}
+
+.column a {
+  border: 3px solid #b4c7da;
+  padding: 0 15px;
+  display: inline-block;
+  margin: 20px 0;
+}
+
+.column a:hover {
+  border-color: #fff;
+}
+
+/* To Navigation Style */
+.codrops-top {
+  background: #566472;
+  background: rgba(255, 255, 255, 0.2);
+  text-transform: uppercase;
+  width: 100%;
+  font-size: 0.69em;
+  line-height: 2.2;
+}
+
+.codrops-top a {
+  padding: 0 1em;
+  letter-spacing: 0.1em;
+  color: #fff;
+  display: inline-block;
+}
+
+.codrops-top a:hover {
+  background: rgba(255, 255, 255, 0.8);
+  color: #2c3e50;
+}
+
+.codrops-top span.right {
+  float: right;
+}
+
+.codrops-top span.right a {
+  float: left;
+  display: block;
+}
+
+.codrops-icon:before {
+  margin: 0 4px;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+.codrops-icon-drop:before {
+  content: "\e001";
+}
+
+.codrops-icon-prev:before {
+  content: "\e004";
+}
+
+@media screen and (max-width: 46.0625em) {
+  .column {
+    width: 100%;
+    min-width: auto;
+    min-height: auto;
+    padding: 1em;
+  }
+
+  .column p {
+    text-align: left;
+    font-size: 1.5em;
+  }
+
+  .column:nth-child(2) {
+    box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.1);
+  }
+}
+@media screen and (max-width: 25em) {
+  .codrops-icon span {
+    display: none;
+  }
+}
+/*
+
+  LAYOUT / STRUCTURE
+
+------------------------------------------------------ */
+html body .master-container {
+  padding-top: 108px;
+}
+
+.constrained {
+  max-width: 40em;
+  margin-left: auto;
+  margin-right: auto;
+}
+.constrained:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*
+
+  GLOBAL HEADER
+
+------------------------------------------------------ */
+header.global {
+  background: rgba(255, 255, 255, 0.55) url("/assets/images/background/logo-underlay-insane.png") 50% 50% no-repeat;
+  background-size: 500%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+header.global nav.global.navigation {
+  padding: 9px 0 9px 9px;
+  position: relative;
+}
+@media screen and (min-width: 40em) {
+  header.global nav.global.navigation {
+    padding: 9px 0;
+  }
+}
+
+.logo {
+  border: 0;
+  color: transparent;
+  font: 0/0 a;
+  text-shadow: none;
+}
+
+.logo {
+  background: transparent url(/assets/images/logo-black.png) 0 0 no-repeat;
+  background-size: 100%;
+  display: block;
+  float: left;
+  margin: 15px 0;
+  padding: 0;
+  height: 30px;
+  width: 105.5px;
+}
+@media screen and (min-width: 40em) {
+  .logo {
+    background: transparent url(/assets/images/logo-black@2x.png) 0 0 no-repeat;
+    background-size: 100%;
+    height: 40px;
+    margin: 10px 0;
+    width: 140.6666666667px;
+  }
+}
+@media screen and (min-width: 40em) {
+  .logo {
+    margin: 0;
+    height: 60px;
+    width: 211px;
+  }
+}
+.logo:hover {
+  background: transparent url(/assets/images/logo-multi-black.png) 0 0 no-repeat;
+  background-size: 100%;
+}
+@media screen and (min-width: 40em) {
+  .logo:hover {
+    background: transparent url(/assets/images/logo-multi-black@2x.png) 0 0 no-repeat;
+    background-size: 100%;
+  }
+}
+
+.gif-search {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: background 0.2s, width 0.2s;
+  transition: background 0.2s, width 0.2s;
+  float: right;
+  height: 60px;
+  overflow: hidden;
+  position: relative;
+  min-width: 60px;
+  width: 0%;
+  /* Open state */
+}
+@media screen and (max-width: 39.9375em) {
+  .gif-search {
+    position: absolute;
+    top: 9px;
+    right: 0;
+  }
+}
+.gif-search .gif-search-input {
+  -webkit-transition: background 0.2s;
+  transition: background 0.2s;
+  background: transparent;
+  border: none;
+  color: #520052;
+  font-family: inherit;
+  font-size: 20px;
+  height: 60px;
+  margin: 0;
+  outline: none;
+  padding: 20px 65px 20px 20px;
+  max-width: 300px;
+  width: 100%;
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.gif-search .gif-search-input::-webkit-input-placeholder {
+  color: purple;
+}
+.gif-search .gif-search-input::-moz-placeholder {
+  color: purple;
+}
+.gif-search .gif-search-input:-moz-placeholder {
+  color: purple;
+}
+.gif-search .gif-search-input:-ms-input-placeholder {
+  color: purple;
+}
+.gif-search .icon-search,
+.gif-search .gif-search-submit {
+  cursor: pointer;
+  display: block;
+  height: 60px;
+  line-height: 1em;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  width: 60px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.gif-search .gif-search-submit {
+  background: #fff;
+  /* IE needs this */
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  /* IE 8 */
+  filter: alpha(opacity=0);
+  /* IE 5-7 */
+  opacity: 0;
+  color: transparent;
+  border: none;
+  outline: none;
+  z-index: -1;
+}
+.gif-search .icon-search {
+  background: #232323;
+  color: #fff;
+  font-size: 27px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  speak: none;
+  text-transform: none;
+  z-index: 90;
+  -webkit-font-smoothing: antialiased;
+}
+.gif-search .icon-search:before {
+  line-height: 60px;
+  vertical-align: 0%;
+}
+.gif-search .gif-search-input,
+.gif-search .icon-search,
+.gif-search .gif-search-submit {
+  border-radius: 7px 0 0 7px;
+}
+@media screen and (min-width: 40em) {
+  .gif-search .gif-search-input,
+  .gif-search .icon-search,
+  .gif-search .gif-search-submit {
+    border-radius: 7px;
+  }
+}
+.gif-search.gif-search-open {
+  max-width: 300px;
+  width: 50%;
+}
+@media screen and (max-width: 39.9375em) {
+  .gif-search.gif-search-open {
+    width: 90%;
+  }
+}
+.gif-search.gif-search-open .icon-search {
+  -webkit-transition: background 0.2s;
+  transition: background 0.2s;
+  background: purple;
+  color: #fff;
+  z-index: 11;
+}
+.gif-search.gif-search-open .gif-search-input {
+  background: #db5cdb;
+}
+.gif-search.gif-search-open .gif-search-submit {
+  z-index: 90;
+}
+
+/* Disabled Javascript */
+.no-js .gif-search {
+  max-width: 300px;
+  width: 50%;
+}
+
+.no-js .gif-search .icon-search {
+  -webkit-transition: background 0.2s;
+  transition: background 0.2s;
+  background: purple;
+  color: #fff;
+  z-index: 11;
+}
+
+.no-js .gif-search .gif-search-submit {
+  z-index: 90;
+}
+
+section.trending-gifs h1 {
+  background: cornflowerblue;
+  color: white;
+  display: inline-block;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 0 0 0 9px;
+  padding: 4.5px 9px;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 40em) {
+  section.trending-gifs h1 {
+    margin-left: 18px;
+  }
+}
+section.trending-gifs h2 {
+  background: indianred;
+  padding: 36px 9px;
+  text-align: center;
+}
+section.trending-gifs h2 em {
+  display: block;
+  font-size: 200%;
+  font-style: normal;
+  text-transform: uppercase;
+}
+section.trending-gifs h2 .button {
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
+  background: #aa5252;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  color: white;
+  display: inline-block;
+  margin: 9px auto;
+  padding: 9px 18px;
+  text-transform: uppercase;
+}
+section.trending-gifs h2 .button:hover {
+  background: #9a4a4a;
+}
+section.trending-gifs ul.trending-items {
+  z-index: -1;
+}
+@media screen and (max-width: 39.9375em) {
+  section.trending-gifs ul.trending-items {
+    padding: 0 9px;
+  }
+}
+section.trending-gifs ul.trending-items .trending-item {
+  float: left;
+  height: 90px;
+  margin: 9px 0;
+  overflow: hidden;
+  width: 100%;
+}
+@media screen and (max-width: 39.9375em) {
+  section.trending-gifs ul.trending-items .trending-item {
+    clear: left;
+  }
+}
+@media screen and (min-width: 40em) {
+  section.trending-gifs ul.trending-items .trending-item {
+    height: 126px;
+    margin: 9px;
+    width: 311px;
+  }
+  section.trending-gifs ul.trending-items .trending-item:nth-of-type(odd) {
+    margin-right: 0;
+  }
+  section.trending-gifs ul.trending-items .trending-item:nth-of-type(even) {
+    margin-left: 0;
+  }
+  section.trending-gifs ul.trending-items .trending-item:nth-of-type(2n) {
+    clear: left;
+  }
+}
+section.trending-gifs ul.trending-items .trending-item img {
+  width: 100%;
+}
+section.trending-gifs ul.trending-items .trending-item:hover, section.trending-gifs ul.trending-items .trending-item:focus {
+  height: 100%;
+}
+section.trending-gifs ul.trending-items .featured-item {
+  margin: 0 0 27px;
+  overflow: hidden;
+  padding: 0;
+  width: 100%;
+}
+section.trending-gifs ul.trending-items .featured-item img {
+  width: 100%;
+}
+section.trending-gifs ul.trending-items .trending-item img {
+  width: 100%;
+}

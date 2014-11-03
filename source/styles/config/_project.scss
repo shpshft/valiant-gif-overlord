@@ -1,0 +1,34 @@
+// PRE-REQUISITES
+// --------------
+
+@import "../components/neat/neat-helpers";
+
+
+
+// GRID SETTINGS
+// -------------
+
+// $column: 90px;
+// $gutter: 30px;
+$grid-columns: 12;
+$max-width: em(640);
+$small        :  new-breakpoint(max-width em(639) 4);
+$medium       :  new-breakpoint(min-width em(640));
+$large        :  $medium;
+$huge         :  $medium;
+
+$constrained  :  $medium;
+
+
+
+// TYPOGRAPHY
+// ----------
+
+// Membership by Monotype
+$type-monotype-sans-400 : "Gill Sans W01 Book";
+$type-monotype-sans-700 : "Gill Sans W01 Bold";
+
+// Global Assignment
+$type-sans : "Helvetica Neue", sans-serif;
+$type-heading : $type-monotype-sans-700, $type-sans;
+$type-serif : serif;

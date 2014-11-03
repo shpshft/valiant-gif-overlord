@@ -1,0 +1,88 @@
+/*
+
+  BRANDING
+
+  Notes:
+  2014.10.31 - Not final, so not included in release.
+
+------------------------------------------------------ */
+.logo {
+  background : transparent url("/assets/images/background/logo-underlay-grey.png") 50% 50% no-repeat;
+  background-size : 100%;
+  display : block;
+  font-family : $type-heading;
+  height : 117px;
+  margin : 0;
+  padding : 0;
+  position : relative;
+  text-align : center;
+  width : 244px;
+
+  div {
+    display : inline-block;
+    height : 100%;
+    margin : 7px 0 0 54px;
+    padding : 0;
+    position : relative;
+    width : 100%;
+  }
+
+  i {
+    color : white;
+    font-style : normal;
+    position : absolute;
+
+    &.g {
+      font-size : 36px;
+      left : 9px;
+      top : 7px;
+      transform : rotate(-9deg);
+    }
+    &.i {
+      font-size : 30px;
+      left : 35px;
+      top : 4px;
+      transform : rotate(-3deg);
+    }
+    &.f {
+      font-size : 27px;
+      left : 41px;
+      top : 6px;
+      transform : rotate(4.5deg);
+    }
+    &.s {
+      font-size : 27px;
+      left : 56px;
+      top : 5px;
+      transform : rotate(-9deg);
+    }
+    &.t {
+      font-size : 27px;
+      left : 68px;
+      top : 4px;
+      transform : rotate(4.5deg);
+    }
+    &.e {
+      font-size : 27px;
+      left : 86px;
+      top : 4px;
+      transform : rotate(-13.5deg);
+    }
+    &.r {
+      font-size : 27px;
+      left : 102px;
+      top : 5px;
+      transform : rotate(6deg);
+    }
+  }
+
+  &:hover {
+    .g { color : #00bcff; }
+    .i { color : #a79ded; }
+    .f { color : #FF5F5F; }
+    .s { color : #D7DD3C; }
+    .t { color : #13E501; }
+    .e { color : #EFAE51; }
+    .r { color : #FF88D8; }
+  }
+}

@@ -1,0 +1,27 @@
+/*
+
+  LAYOUT / STRUCTURE
+
+------------------------------------------------------ */
+
+html {
+
+  body {
+
+    .master-container {
+      padding-top : 108px;
+
+      & > header {
+
+      }
+
+      & > footer {
+
+      }
+    }
+  }
+}
+
+.constrained {
+  @include outer-container;
+}

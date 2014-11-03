@@ -1,0 +1,13 @@
+// MICRO CLEARFIX
+.clearfix {
+  &:before {
+    content : " ";
+    display : table;
+  }
+  &:after {
+    clear : both;
+    content : " ";
+    display : table;
+  }
+}
+

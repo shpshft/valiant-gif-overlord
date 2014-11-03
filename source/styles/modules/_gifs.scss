@@ -1,0 +1,111 @@
+section.trending-gifs {
+  h1 {
+    background : cornflowerblue;
+    color : white;
+    display : inline-block;
+    font-family : $type-sans;
+    font-size : 18px;
+    font-weight : 700;
+    letter-spacing : 1px;
+    margin : 0 0 0 9px;
+    padding : 4.5px 9px;
+    text-transform : uppercase;
+
+    @include media ($constrained) {
+      margin-left : 18px;
+    }
+  }
+
+  h2 {
+    background : indianred;
+    padding : 36px 9px;
+    text-align : center;
+
+    em {
+      display : block;
+      font-size : 200%;
+      font-style : normal;
+      text-transform : uppercase;
+    }
+
+    .button {
+      @include transition (background 0.3s);
+      background : desaturate(darken(indianred, 9), 18);
+      border : 1px solid transparentize(black, 0.90);
+      border-radius : 3px;
+      color : white;
+      display : inline-block;
+      margin : 9px auto;
+      padding : 9px 18px;
+      text-transform : uppercase;
+
+      &:hover {
+        background : desaturate(darken(indianred, 13.5), 18);
+      }
+    }
+  }
+
+  ul.trending-items {
+    z-index : -1;
+
+    @include media ($small) {
+      padding : 0 9px;
+    }
+
+    .trending-item {
+      float : left;
+      height : 90px;
+      margin : 9px 0;
+      overflow : hidden;
+      width : 100%;
+
+      @include media ($small) {
+        clear : left;
+      }
+
+      @include media ($constrained) {
+        height : 126px;
+        margin : 9px;
+        width : 311px;
+
+        &:nth-of-type(odd) {
+          margin-right : 0;
+        }
+
+        &:nth-of-type(even) {
+          margin-left : 0;
+        }
+
+        &:nth-of-type(2n) {
+          clear : left;
+        }
+      }
+
+      img {
+        width : 100%;
+      }
+
+      &:hover,
+      &:focus {
+        height : 100%;
+      }
+    }
+
+    .featured-item {
+      margin : 0 0 27px;
+      overflow : hidden;
+      padding : 0;
+      width : 100%;
+
+      img {
+        width : 100%;
+      }
+    }
+
+    .trending-item {
+      img {
+        width : 100%;
+      }
+    }
+  }
+}

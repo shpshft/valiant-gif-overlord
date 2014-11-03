@@ -1,0 +1,74 @@
+/*
+
+  GLOBAL HEADER
+
+------------------------------------------------------ */
+
+header.global {
+  background : transparentize(white, 0.45) url("/assets/images/background/logo-underlay-insane.png") 50% 50% no-repeat;
+  background-size : 500%;
+
+  position : fixed;
+  top : 0; right : 0; left : 0;
+
+  nav.global.navigation {
+    // background : white;
+    padding : 9px 0 9px 9px;
+    position : relative;
+
+    @include media ($constrained) {
+      padding : 9px 0;
+    }
+  }
+}
+
+// BRANDING
+.logo {
+  border : 0;
+  color : transparent;
+  font : 0/0 a;
+  text-shadow : none;
+}
+
+.logo {
+
+  // ELEMENT-SCOPED VARIABLES
+  $element-logo-height : 60px;
+  $element-logo-width : 211px;
+
+  background : transparent url(/assets/images/logo-black.png) 0 0 no-repeat;
+  background-size : 100%;
+  display : block;
+  float : left;
+  margin : 15px 0;
+  padding : 0;
+
+  height : $element-logo-height / 2;
+  width : $element-logo-width / 2;
+
+  @include media ($medium) {
+    background : transparent url(/assets/images/logo-black@2x.png) 0 0 no-repeat;
+    background-size : 100%;
+    height : $element-logo-height / 1.5;
+    margin : 10px 0;
+    width : $element-logo-width / 1.5;
+  }
+
+  @include media ($constrained) {
+    margin : 0;
+
+    height : $element-logo-height;
+    width : $element-logo-width;
+  }
+
+  &:hover {
+    background : transparent url(/assets/images/logo-multi-black.png) 0 0 no-repeat;
+    background-size : 100%;
+
+    @include media ($medium) {
+      background : transparent url(/assets/images/logo-multi-black@2x.png) 0 0 no-repeat;
+      background-size : 100%;
+    }
+  }
+}
+

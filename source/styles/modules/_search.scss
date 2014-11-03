@@ -1,0 +1,142 @@
+.gif-search {
+
+  // Component-Scoped Variables
+  $component-search-height : 60px;
+  $component-search-radius : 7px;
+
+  @include backface-visibility (hidden);
+  @include transition ( background 0.2s,
+                        width 0.2s );
+  float : right;
+  height : $component-search-height;
+  overflow : hidden;
+  position : relative;
+  min-width : $component-search-height;
+  width : 0%;
+
+  @include media ($small) {
+    position : absolute;
+    top : 9px; right : 0;
+  }
+
+
+  .gif-search-input {
+    @include transition (background 0.2s);
+    background : transparent;
+    border : none;
+    color : darken(purple, 9);
+    font-family : inherit;
+    font-size : 20px;
+    height : $component-search-height;
+    margin : 0;
+    outline : none;
+    padding : 20px 65px 20px 20px;
+    max-width : 300px;
+    width : 100%;
+    z-index : 10;
+
+    position : absolute;
+    top : 0; right : 0;
+
+    @include placeholder {
+      color : purple;
+    }
+  }
+
+  .icon-search,
+  .gif-search-submit  {
+    cursor : pointer;
+    display : block;
+    height : $component-search-height;
+    line-height : 1em;
+    margin : 0;
+    padding : 0;
+    text-align : center;
+    width : $component-search-height;
+
+    position : absolute;
+    top : 0; right : 0;
+  }
+
+  .gif-search-submit {
+    background : #fff; /* IE needs this */
+    -ms-filter : "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; /* IE 8 */
+    filter : alpha(opacity=0); /* IE 5-7 */
+    opacity : 0;
+    color : transparent;
+    border : none;
+    outline : none;
+    z-index : -1;
+  }
+
+  .icon-search {
+    background : #232323;
+    color : #fff;
+    font-size : 27px;
+    font-style : normal;
+    font-variant : normal;
+    font-weight : normal;
+    speak : none;
+    text-transform : none;
+    z-index : 90;
+    -webkit-font-smoothing : antialiased;
+
+    &:before {
+      line-height : $component-search-height;
+      vertical-align : 0%;
+    }
+  }
+
+  .gif-search-input,
+  .icon-search,
+  .gif-search-submit {
+    border-radius : $component-search-radius 0 0 $component-search-radius;
+
+    @include media ($constrained) {
+      border-radius : $component-search-radius;
+    }
+  }
+
+  /* Open state */
+  &.gif-search-open {
+    max-width : 300px;
+    width : 50%;
+
+    @include media ($small) {
+      width : 90%;
+    }
+  }
+
+  &.gif-search-open .icon-search {
+    @include transition (background 0.2s);
+    background : purple;
+    color : #fff;
+    z-index : 11;
+  }
+
+  &.gif-search-open .gif-search-input {
+    background : desaturate(lighten(purple, 36), 36);
+  }
+
+  &.gif-search-open .gif-search-submit {
+    z-index : 90;
+  }
+}
+
+
+/* Disabled Javascript */
+.no-js .gif-search {
+  max-width : 300px;
+  width : 50%;
+}
+
+.no-js .gif-search .icon-search {
+  @include transition (background 0.2s);
+  background : purple;
+  color : #fff;
+  z-index : 11;
+}
+
+.no-js .gif-search .gif-search-submit {
+  z-index : 90;
+}
