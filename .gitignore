@@ -1,0 +1,71 @@
+###########
+# CODEKIT #
+###########
+config.codekit
+
+#########
+# LINUX #
+#########
+*~
+
+
+############
+# MAC OS X #
+############
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
+
+
+###########
+# NODE.JS #
+###########
+lib-cov
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+pids
+logs
+results
+node_modules
+
+
+#########################
+# SASS / SCSS / COMPASS #
+#########################
+*.sass-cache
+
+
+################
+# SUBLIME TEXT #
+################
+*.sublime-workspace
+# Project files should be checked into the repository, unless a significant proportion of contributors will probably not be using SublimeText.
+# *.sublime-project
+
+
+############
+# TEXTMATE #
+############
+*.tmproj
+*.tmproject
+tmtags
+
+
+#######
+# VIM #
+#######
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+*~
